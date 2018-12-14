@@ -2,6 +2,9 @@ package globalShit;
 
 public class SleepyThread {
 	static Thread t = new Thread();
+	public static void so(String input){
+		System.out.println(input);
+	}
 	public static void st2(String input){
 		
 		try{
