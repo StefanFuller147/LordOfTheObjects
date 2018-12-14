@@ -1,7 +1,7 @@
 package playerCharacter;
 
 public class HeroTemplate {
-	private int strenght;
+	private int strength;
 	private int health;
 	private int intelligence;
 	private int wisdom;
@@ -11,11 +11,11 @@ public class HeroTemplate {
 	private String name;
 	private String heroClass;
 	private String heroRace;
-	public int getStrenght() {
-		return strenght;
+	public int getstrength() {
+		return strength;
 	}
-	public void setStrenght(int strenght) {
-		this.strenght = strenght;
+	public void setstrength(int strength) {
+		this.strength = strength;
 	}
 	public int getHealth() {
 		return health;
@@ -67,14 +67,14 @@ public class HeroTemplate {
 	}
 	@Override
 	public String toString() {
-		return "HeroCreation [strenght=" + strenght + ", health=" + health + ", intelligence=" + intelligence
+		return "HeroCreation [strength=" + strength + ", health=" + health + ", intelligence=" + intelligence
 				+ ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", charisma=" + charisma + ", name=" + name
 				+ ", heroClass=" + heroClass + ", heroRace=" + heroRace + "]";
 	}
-	public HeroTemplate(int strenght, int health, int intelligence, int wisdom, int dexterity, int charisma,
+	public HeroTemplate(int strength, int health, int intelligence, int wisdom, int dexterity, int charisma,
 			String name, String heroClass, String heroRace) {
 		super();
-		this.strenght = strenght;
+		this.strength = strength;
 		this.health = health;
 		this.intelligence = intelligence;
 		this.wisdom = wisdom;

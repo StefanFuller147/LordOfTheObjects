@@ -3,16 +3,20 @@ package playerCharacter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import globalShit.RandomNumberGenerator;
 import globalShit.SleepyThread;
 
 public class CreateYourHero {
 	static Scanner kb = new Scanner(System.in);
 	static HeroTemplate hero = new HeroTemplate();
 	static SleepyThread st = new SleepyThread();
+	static RandomNumberGenerator rng = new RandomNumberGenerator();
 	static String confirm;
 	static int confirmRaceOrClass;
+	static int sum;
 	static ArrayList<String> heroClass = new ArrayList<>();
 	static ArrayList<String> heroRace = new ArrayList<>();
+	static ArrayList<Integer> heroStats = new ArrayList<>();
 
 	public static void main(String[] args) {
 
@@ -92,8 +96,47 @@ public class CreateYourHero {
 		heroRace.add("Orc");
 		heroRace.add("Elf");
 		heroRace.add("Dwarf");
-		for (int i = 0; i < heroRace.size(); i++)
+		for (int i = 0; i < heroRace.size(); i++) {
 			st.st1(i + 1 + ": " + heroRace.get(i));
-	}
+		}
 
+		do {
+			do {
+				confirmRaceOrClass = kb.nextInt();
+
+				if (confirmRaceOrClass == 1) {
+					hero.setHeroRace("Human");
+				} else if (confirmRaceOrClass == 2) {
+					hero.setHeroRace("Orc");
+				} else if (confirmRaceOrClass == 3) {
+					hero.setHeroRace("Elf");
+				} else if (confirmRaceOrClass == 4) {
+					hero.setHeroRace("Dwarf");
+				} else {
+					st.so(confirmRaceOrClass + " is not a valid choice");
+				}
+			} while (confirmRaceOrClass < 1 || confirmRaceOrClass > 5);
+
+			st.so("You have chosen" + hero.getHeroRace() + ". Is this correct?");
+			confirm = kb.next();
+			if (confirm.equalsIgnoreCase("yes")) {
+				System.out.println("Okay, you are now a " + hero.getHeroRace() + " " + hero.getHeroClass());
+				break;
+			}
+		} while (confirm.equalsIgnoreCase("no"));
+
+		System.out.println();
+
+		st.st1("Let's roll for your character stats now");
+		
+		for(int i = 0; i < 5; i++){
+			rng.rollForCharacterStats(sum);
+			heroStats.add(sum);
+			System.out.println(heroStats.get(i));
+		}
+		for (int i = 0; i < heroStats.size(); i++) {
+			st.st1(i + 1 + ": "+ heroStats.get(i));
+		}
+		
+	}
 }
