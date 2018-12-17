@@ -1,5 +1,9 @@
 package playerCharacter;
 
+import java.util.ArrayList;
+
+import heroInventory.InventoryItems;
+
 public class HeroTemplate {
 	private int strength;
 	private int health;
@@ -11,11 +15,26 @@ public class HeroTemplate {
 	private String name;
 	private String heroClass;
 	private String heroRace;
+	
+	private ArrayList <InventoryItems> inventory = new ArrayList<>();
+	
 	public int getstrength() {
 		return strength;
 	}
 	public void setstrength(int strength) {
 		this.strength = strength;
+	}
+	public int getStrength() {
+		return strength;
+	}
+	public void setStrength(int strength) {
+		this.strength = strength;
+	}
+	public ArrayList<InventoryItems> getInventory() {
+		return inventory;
+	}
+	public void setInventory(ArrayList<InventoryItems> inventory) {
+		this.inventory = inventory;
 	}
 	public int getHealth() {
 		return health;
@@ -67,12 +86,12 @@ public class HeroTemplate {
 	}
 	@Override
 	public String toString() {
-		return "HeroCreation [strength=" + strength + ", health=" + health + ", intelligence=" + intelligence
+		return "HeroTemplate [strength=" + strength + ", health=" + health + ", intelligence=" + intelligence
 				+ ", wisdom=" + wisdom + ", dexterity=" + dexterity + ", charisma=" + charisma + ", name=" + name
-				+ ", heroClass=" + heroClass + ", heroRace=" + heroRace + "]";
+				+ ", heroClass=" + heroClass + ", heroRace=" + heroRace + ", inventory=" + inventory + "]";
 	}
 	public HeroTemplate(int strength, int health, int intelligence, int wisdom, int dexterity, int charisma,
-			String name, String heroClass, String heroRace) {
+			String name, String heroClass, String heroRace, ArrayList<InventoryItems> inventory) {
 		super();
 		this.strength = strength;
 		this.health = health;
@@ -83,6 +102,7 @@ public class HeroTemplate {
 		this.name = name;
 		this.heroClass = heroClass;
 		this.heroRace = heroRace;
+		this.inventory = inventory;
 	}
 	public HeroTemplate() {
 		super();

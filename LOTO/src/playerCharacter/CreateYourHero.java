@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 import globalShit.RandomNumberGenerator;
 import globalShit.SleepyThread;
-import mainStory.MainStory;
+import mainStory.MainVillage;
 
 public class CreateYourHero {
 	static Scanner kb = new Scanner(System.in);
@@ -188,7 +188,7 @@ public class CreateYourHero {
 			int health = r.nextInt(50 - 20) + 20;
 			hero.setHealth(health);
 			
-			MainStory.startingVillage(hero);
+			MainVillage.startingVillage(hero);
 		}
 		else if(looksGoodToYou.equalsIgnoreCase("no")){
 			System.out.println("Tough shit, we're going in anyways!!! WOOOOOOOO!");
@@ -197,7 +197,7 @@ public class CreateYourHero {
 			int health = r.nextInt(50 - 20) + 20;
 			hero.setHealth(health);
 			
-			MainStory.startingVillage(hero);
+			MainVillage.startingVillage(hero);
 		}
 		
 	}
