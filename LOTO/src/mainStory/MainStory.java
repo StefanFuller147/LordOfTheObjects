@@ -1,5 +1,6 @@
 package mainStory;
 
+<<<<<<< HEAD
 import playerCharacter.HeroTemplate;
 
 public class MainStory {
@@ -8,5 +9,8 @@ public class MainStory {
 		
 		System.out.println("Your hero's name is: " + hero.getName());
 	}
+=======
+public class MainStory {
+>>>>>>> 403a58a344aeb4b72514ede3aa604c85ae7fa083
 }
 	

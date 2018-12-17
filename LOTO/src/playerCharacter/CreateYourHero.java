@@ -121,6 +121,7 @@ public class CreateYourHero {
 			} while (confirmRaceOrClass < 1 || confirmRaceOrClass > 5);
 
 			st.so("You have chosen " + hero.getHeroRace() + ". Is this correct?");
+
 			confirm = kb.next();
 			if (confirm.equalsIgnoreCase("yes")) {
 				System.out.println("Okay, you are now a " + hero.getHeroRace() + " " + hero.getHeroClass());
