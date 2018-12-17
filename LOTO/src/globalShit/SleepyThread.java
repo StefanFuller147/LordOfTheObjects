@@ -26,4 +26,11 @@ public class SleepyThread {
 		}catch(Exception e){}
 		System.out.println(input);
 	}
+	
+	public static void stHalf(String input){
+		try{
+			t.sleep(500);
+		}catch(Exception e){}
+		System.out.println(input);
+	}
 }
