@@ -185,6 +185,7 @@ public class CreateYourHero {
 			System.out.println();
 			System.out.println("Great! Off we go!");
 			
+			kb.close();
 			int health = r.nextInt(50 - 20) + 20;
 			hero.setHealth(health);
 			
@@ -193,7 +194,7 @@ public class CreateYourHero {
 		else if(looksGoodToYou.equalsIgnoreCase("no")){
 			System.out.println("Tough shit, we're going in anyways!!! WOOOOOOOO!");
 			
-			
+			kb.close();
 			int health = r.nextInt(50 - 20) + 20;
 			hero.setHealth(health);
 			

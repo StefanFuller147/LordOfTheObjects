@@ -1,10 +1,10 @@
 package heroInventory;
 
-public class Potions {
+public class Armor {
 	private String name;
 	private int price;
 	private int weight;
-	private int type;
+	private int protection;
 	
 	
 	public String getName() {
@@ -25,23 +25,21 @@ public class Potions {
 	public void setWeight(int weight) {
 		this.weight = weight;
 	}
-	public int getType() {
-		return type;
+	public int getProtection() {
+		return protection;
 	}
-	public void setType(int type) {
-		this.type = type;
+	public void setProtection(int protection) {
+		this.protection = protection;
 	}
-	public Potions(String name, int price, int weight, int type) {
+	public Armor(String name, int price, int weight, int protection) {
 		super();
 		this.name = name;
 		this.price = price;
 		this.weight = weight;
-		this.type = type;
+		this.protection = protection;
 	}
-	public Potions() {
+	public Armor() {
 		super();
 		// TODO Auto-generated constructor stub
-	}
-	
-	
+	} 
 }
