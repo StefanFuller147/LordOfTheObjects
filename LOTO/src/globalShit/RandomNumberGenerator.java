@@ -9,4 +9,5 @@ public class RandomNumberGenerator {
 		sum = r.nextInt(20-9) + 9;
 		return sum;
 	}
+
 }

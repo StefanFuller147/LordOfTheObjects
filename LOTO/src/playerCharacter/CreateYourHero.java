@@ -25,8 +25,8 @@ public class CreateYourHero {
 
 		st.stHalf("Welcome to character creation! Please input your characters name");
 		String heroName = kb.nextLine();
-		st.stHalf(heroName + ", is that the name you'd like to give your hero?");
 		do {
+			st.stHalf(heroName + ", is that the name you'd like to give your hero?");
 			confirm = kb.nextLine();
 
 			if (confirm.equalsIgnoreCase("yes")) {
@@ -40,7 +40,6 @@ public class CreateYourHero {
 			if (!confirm.equalsIgnoreCase("yes") || !confirm.equalsIgnoreCase("no")) {
 				st.stHalf(confirm + " is not a valid answer, please answer yes or no.");
 				System.out.println();
-				st.stHalf(heroName + " is that the name you'd like to give your hero?");
 			}
 		} while (confirm.equalsIgnoreCase("no"));
 
@@ -143,33 +142,33 @@ public class CreateYourHero {
 		for (int i = 0; i < heroStats.size(); i++) {
 			st.stHalf(i + 1 + ": " + heroStats.get(i));
 		}
-		
-		st.stHalf("So, since you are a " + hero.getHeroRace() + " " + hero.getHeroClass() +". Here are my suggestions");
+
+		st.stHalf(
+				"So, since you are a " + hero.getHeroRace() + " " + hero.getHeroClass() + ". Here are my suggestions");
 		String requestForAssistance = kb.nextLine();
-		if(requestForAssistance.equalsIgnoreCase("yes")){
+		if (requestForAssistance.equalsIgnoreCase("yes")) {
 			System.out.println("Give me a moment...");
-		}
-		else if(requestForAssistance.equalsIgnoreCase("no")){
+		} else if (requestForAssistance.equalsIgnoreCase("no")) {
 			System.out.println("Tough shit, Imma do this anyways");
 		}
-		
-		if(hero.getHeroClass().equals("Warrior")){
-			
+
+		if (hero.getHeroClass().equals("Warrior")) {
+
 			hero.setstrength(heroStats.get(0));
 			heroStats.remove(0);
-			
+
 			hero.setDexterity(heroStats.get(0));
 			heroStats.remove(0);
-			
+
 			hero.setCharisma(heroStats.get(0));
 			heroStats.remove(0);
-			
+
 			hero.setWisdom(heroStats.get(0));
 			heroStats.remove(0);
-			
+
 			hero.setIntelligence(heroStats.get(0));
 			heroStats.remove(0);
-			
+
 			System.out.println("Here is what I reccommend. ");
 			st.stHalf("Strength: " + hero.getstrength());
 			st.stHalf("Dexterity: " + hero.getDexterity());
@@ -177,29 +176,130 @@ public class CreateYourHero {
 			st.stHalf("Wisdom: " + hero.getWisdom());
 			st.stHalf("Intelligence: " + hero.getIntelligence());
 		}
+		
+		if(hero.getHeroClass().equalsIgnoreCase("Cleric")){
+
+			hero.setstrength(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setDexterity(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setCharisma(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setWisdom(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setIntelligence(heroStats.get(0));
+			heroStats.remove(0);
+
+			System.out.println("Here is what I reccommend. ");
+			st.stHalf("Strength: " + hero.getstrength());
+			st.stHalf("Dexterity: " + hero.getDexterity());
+			st.stHalf("Charisma: " + hero.getCharisma());
+			st.stHalf("Wisdom: " + hero.getWisdom());
+			st.stHalf("Intelligence: " + hero.getIntelligence());
+		}
+		
+		if(hero.getHeroClass().equalsIgnoreCase("Paladin")){
+
+			hero.setstrength(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setDexterity(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setCharisma(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setWisdom(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setIntelligence(heroStats.get(0));
+			heroStats.remove(0);
+
+			System.out.println("Here is what I reccommend. ");
+			st.stHalf("Strength: " + hero.getstrength());
+			st.stHalf("Dexterity: " + hero.getDexterity());
+			st.stHalf("Charisma: " + hero.getCharisma());
+			st.stHalf("Wisdom: " + hero.getWisdom());
+			st.stHalf("Intelligence: " + hero.getIntelligence());
+		}
+		
+		if(hero.getHeroClass().equalsIgnoreCase("Thief")){
+
+			hero.setstrength(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setDexterity(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setCharisma(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setWisdom(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setIntelligence(heroStats.get(0));
+			heroStats.remove(0);
+
+			System.out.println("Here is what I reccommend. ");
+			st.stHalf("Strength: " + hero.getstrength());
+			st.stHalf("Dexterity: " + hero.getDexterity());
+			st.stHalf("Charisma: " + hero.getCharisma());
+			st.stHalf("Wisdom: " + hero.getWisdom());
+			st.stHalf("Intelligence: " + hero.getIntelligence());
+		}
+		
+		if(hero.getHeroClass().equalsIgnoreCase("Wizard")){
+
+			hero.setstrength(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setDexterity(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setCharisma(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setWisdom(heroStats.get(0));
+			heroStats.remove(0);
+
+			hero.setIntelligence(heroStats.get(0));
+			heroStats.remove(0);
+
+			System.out.println("Here is what I reccommend. ");
+			st.stHalf("Strength: " + hero.getstrength());
+			st.stHalf("Dexterity: " + hero.getDexterity());
+			st.stHalf("Charisma: " + hero.getCharisma());
+			st.stHalf("Wisdom: " + hero.getWisdom());
+			st.stHalf("Intelligence: " + hero.getIntelligence());
+		}
+		
+		
 		System.out.println();
 		System.out.println("Does this look good to you?");
 		String looksGoodToYou = kb.nextLine();
-		
-		if(looksGoodToYou.equalsIgnoreCase("Yes")){
+
+		if (looksGoodToYou.equalsIgnoreCase("Yes")) {
 			System.out.println();
 			System.out.println("Great! Off we go!");
-			
+
 			kb.close();
 			int health = r.nextInt(50 - 20) + 20;
 			hero.setHealth(health);
-			
+
 			MainVillage.startingVillage(hero);
-		}
-		else if(looksGoodToYou.equalsIgnoreCase("no")){
+		} else if (looksGoodToYou.equalsIgnoreCase("no")) {
 			System.out.println("Tough shit, we're going in anyways!!! WOOOOOOOO!");
-			
+
 			kb.close();
 			int health = r.nextInt(50 - 20) + 20;
 			hero.setHealth(health);
-			
+
 			MainVillage.startingVillage(hero);
 		}
-		
+
 	}
 }

@@ -55,7 +55,7 @@ public class Armory {
 				for (int i = 0; i < armoryWeaponsInventory.size(); i++) {
 					System.out.println(i + 1 + ": " + armoryWeaponsInventory.get(i).getName());
 				}
-				System.out.println("Would you like to take a look at anything in particular?");
+				System.out.println("Would you like to take a look at anything in particular? If not, press 6 to go back to town.");
 				int lookAtWeaponMoreCloselier = kb.nextInt();
 				
 				if(lookAtWeaponMoreCloselier == 1){
@@ -96,6 +96,9 @@ public class Armory {
 					System.out.println("Damage: " + armoryWeaponsInventory.get(5).getDamage());
 					System.out.println("Weight: " + armoryWeaponsInventory.get(5).getWeight());
 
+				}
+				if(lookAtWeaponMoreCloselier == 6){
+					MainVillage.whereToGoInTown(hero);
 				}
 			}
 			if(armorOrWeapons.equals("armor")){

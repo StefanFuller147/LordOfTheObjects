@@ -28,6 +28,7 @@ public class MainVillage {
 	}
 
 	public static void whereToGoInTown(HeroTemplate hero) {
+		int placeInTownToGo;
 		st.stHalf("Crier, \"Would you like to visit the... \n1)Pub \n2)General Store \n3)Alchemist \n4)Armorer\"");
 		do {
 			placeInTownToGo = kb.nextInt();
